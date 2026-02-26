@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 export const routes: Routes = [
     {path:"login", component:Login},
     {path:"register", component:Register},
-    {path:"list", component:List/*, canActivate: [loginGuard]*/},
+    {path:"list", component:List, canActivate: [loginGuard]},
     {path:"creation", component:Creation},
     {path:"levelup", component:Levelup},
     {path:"details", component:Details},
