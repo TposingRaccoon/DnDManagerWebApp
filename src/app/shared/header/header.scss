@@ -1,81 +1,69 @@
-/* =========================
-   Header Navigation Bar
-========================= */
-
 header {
-  background: #3e2c1c;   /* Dark brown header background */
+  background: #3e2c1c; 
   padding: 15px 0;
-  text-align: center;     /* Center all links */
+  text-align: center;    
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-}
-
-/* =========================
-   Navigation Links as Buttons
-========================= */
+}/
 
 header a {
-  background: #f4e6c8;          /* Parchment color */
-  border: 2px solid #5c4328;    /* Dark brown border */
+  background: #f4e6c8;       
+  border: 2px solid #5c4328;  
   border-radius: 8px;
-  padding: 12px 20px;            /* Bigger buttons */
+  padding: 12px 20px;           
   text-decoration: none;
   font-family: "Garamond", "Times New Roman", serif;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #3e2c1c;               /* Dark text */
+  color: #3e2c1c;              
   transition: 0.2s ease;
   margin: 0 8px;
   display: inline-block;
   cursor: pointer;
-  font-size: 18px;               /* Larger font */
+  font-size: 18px;              
 }
 
 header a:hover {
-  background: #e8d7b5;          /* Slightly darker hover */
+  background: #e8d7b5;          
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 header a:active {
-  background: #8b5e34;          /* Active click color */
+  background: #8b5e34;       
   color: #fff8e7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) inset;
 }
-
-/* Optional: hidden links */
 header button[hidden] {
   display: none;
 }
 header button {
-  background: #f4e6c8;          /* Parchment color */
-  border: 2px solid #5c4328;    /* Dark brown border */
+  background: #f4e6c8;        
+  border: 2px solid #5c4328;   
   border-radius: 8px;
-  padding: 12px 20px;            /* Bigger buttons */
+  padding: 12px 20px;            
   text-decoration: none;
   font-family: "Garamond", "Times New Roman", serif;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #3e2c1c;               /* Dark text */
+  color: #3e2c1c;              
   transition: 0.2s ease;
   margin: 0 8px;
   display: inline-block;
   cursor: pointer;
-  font-size: 18px;               /* Larger font */
+  font-size: 18px;           
 }
 
 header button:hover {
-  background: #e8d7b5;          /* Slightly darker hover */
+  background: #e8d7b5;        
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 header button:active {
-  background: #8b5e34;          /* Active click color */
+  background: #8b5e34;        
   color: #fff8e7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4) inset;
 }
-
-/* Optional: hidden links */
 header button[hidden] {
   display: none;
 }

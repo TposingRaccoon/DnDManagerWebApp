@@ -1,12 +1,8 @@
-/* =========================
-   Character Display Container
-========================= */
-
 .character {
   max-width: 900px;
   margin: 50px auto;
   padding: 40px;
-  background: #f4e6c8; /* Parchment background */
+  background: #f4e6c8; 
   border: 3px solid #5c4328;
   border-radius: 8px;
   box-shadow:
@@ -15,11 +11,6 @@
   font-family: "Garamond", "Times New Roman", serif;
   color: #3e2c1c;
 }
-
-/* =========================
-   Headings Styling
-========================= */
-
 .character h1 {
   font-size: 36px;
   margin-bottom: 10px;
@@ -46,11 +37,6 @@
   margin: 4px 0;
   font-style: italic;
 }
-
-/* =========================
-   Stat Table (Horizontal)
-========================= */
-
 .stattable {
   display: flex;
   justify-content: space-between;
@@ -69,11 +55,6 @@
   font-weight: bold;
   font-size: 16px;
 }
-
-/* =========================
-   Paragraphs & Class Specific
-========================= */
-
 .character p {
   background: rgba(255, 248, 231, 0.6);
   border: 2px solid #5c4328;
@@ -81,11 +62,6 @@
   padding: 8px 12px;
   margin: 6px 0;
 }
-
-/* =========================
-   Spell List
-========================= */
-
 .character h4 {
   background: #fff8e7;
   border: 2px solid #5c4328;
@@ -93,11 +69,6 @@
   padding: 6px 10px;
   margin: 4px 0;
 }
-
-/* =========================
-   Optional Highlights
-========================= */
-
 .character h2,
 .character h3 {
   color: #3e2c1c;
@@ -107,17 +78,13 @@
   color: #5c4328;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
-/* =========================
-   Back Button (Fixed Top Left)
-========================= */
-
 .back {
   position: fixed;
   top: 130px;
   left: 340px;
   z-index: 1000;
 
-  background: #f4e6c8;              /* Parchment */
+  background: #f4e6c8;
   border: 3px solid #5c4328;
   border-radius: 6px;
   box-shadow:
@@ -177,5 +144,5 @@ button:hover {
   box-shadow:
     0 0 0 4px #3e2c1c,
     0 15px 30px rgba(0, 0, 0, 0.4);
-  background: #f4e6c8; /* keep same as character */
+  background: #f4e6c8; 
 }
