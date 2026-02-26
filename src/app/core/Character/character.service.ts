@@ -84,45 +84,45 @@ export class CharacterService {
     CreateCharacter(c: any) : void{
       var newCharacter:character={
         username : "",
-        name : this.name(),
+        name : c.name(),
         race : {
-          name:this.selectedRace?.name,
-          index:this.selectedRace?.index},
+          name:c.selectedRace?.name,
+          index:c.selectedRace?.index},
         subrace : {
-          name:this.selectedSubrace?.name,
-          index:this.selectedSubrace?.index},
-        str : this.str(),
-        dex : this.dex(),
-        con : this.con(),
-        int : this.int(),
-        wis : this.wis(),
-        cha : this.cha(),
+          name:c.selectedSubrace?.name,
+          index:c.selectedSubrace?.index},
+        str : c.str(),
+        dex : c.dex(),
+        con : c.con(),
+        int : c.int(),
+        wis : c.wis(),
+        cha : c.cha(),
         background : undefined,
         proficiency : undefined,
-        languages : this.selectedRace?.languages,
+        languages : c.selectedRace?.languages,
         class : {
-          name:this.selectedLevel?.class.name,
-          index:this.selectedLevel?.class.index},
+          name:c.selectedLevel?.class.name,
+          index:c.selectedLevel?.class.index},
         totalLevel : 1,
-        proficiencyBonus : this.selectedLevel?.profBonus,
+        proficiencyBonus : c.selectedLevel?.profBonus,
         classLevels :[{
-          name:this.selectedLevel?.class.name,
+          name:c.selectedLevel?.class.name,
           level : 1}],
-        subclasses : [this.selectedLevel?.subclass?.name ?? ""],
+        subclasses : [c.selectedLevel?.subclass?.name ?? ""],
         equipements : undefined,
-        skills : this.skills,
-        spells : this.spells,
+        skills : c.skills,
+        spells : c.spells,
         classSpecific : [
-          {classIndex :this.selectedLevel?.class.index,
-          ClassSpecific : this.selectedLevel?.classSpecific}
+          {classIndex :c.selectedLevel?.class.index,
+          ClassSpecific : c.selectedLevel?.classSpecific}
         ],
         spellcastings : [
-          {classIndex :this.selectedLevel?.class.index,
-          Spellcasting : this.selectedLevel?.spellcasting}
+          {classIndex :c.selectedLevel?.class.index,
+          Spellcasting : c.selectedLevel?.spellcasting}
         ],
-        features : this.features
+        features : c.features
       }
-      this.api.CreateCharacter(newCharacter)
+      c.api.CreateCharacter(newCharacter)
     }
     
   }

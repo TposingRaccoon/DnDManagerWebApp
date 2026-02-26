@@ -41,8 +41,8 @@ fg = this.fb.group({
   cha: [10],
   class: [''],
   subclass: [''],
-  cantrips: this.fb.array([],[Validators.maxLength(2)]),
-  spells: this.fb.array([],[Validators.maxLength(3)]),
+  cantrips: this.fb.array([]),
+  spells: this.fb.array([]),
 });
 get cantrips(): FormArray {
   return this.fg.get('cantrips') as FormArray;
