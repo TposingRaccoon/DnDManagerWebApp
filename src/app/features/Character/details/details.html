@@ -1,0 +1,47 @@
+
+<button class="back" (click)="back()">return</button>
+<div class="character">
+    <h1>{{character?.name}}</h1>
+    <h2>{{character?.race?.name}}</h2><h3>{{character?.subrace?.name}}</h3>
+    <h2>Level {{character?.totalLevel}}</h2>
+    <h2>{{character?.class?.name}}</h2>
+    @for (classLevel of character?.classLevels; track $index) {
+        <h3>{{classLevel.name}} {{classLevel.level}}</h3>
+    }
+    @if(character?.proficiency){
+        <h2>Proficiency</h2>
+        @for (prof of character?.proficiency; track $index) {
+            <h3>{{prof.name}}</h3>
+        }
+    }
+    
+    <div class="stattable">
+        <h3>STR {{character?.str}}</h3>
+        <h3>DEX {{character?.dex}}</h3>
+        <h3>CON {{character?.con}}</h3>
+        <h3>INT {{character?.int}}</h3>
+        <h3>WIS {{character?.wis}}</h3>
+        <h3>CHA {{character?.cha}}</h3>
+    </div>
+    @if (character?.spellcastings != undefined){
+        <h2>Spellcasting</h2>
+        <h3>Spellcasting</h3>        
+        @for (spell of character?.spells; track $index) {
+            <h4>{{spell.name}}</h4>
+        }
+    }
+    @if (character?.classSpecific != undefined){
+        <h2>Class Specific</h2>
+        
+        @for (specific of character?.classSpecific; track $index) {
+             @for (specific2 of specific.ClassSpecific|toEntries; track $index){
+                @if(specific2[1]){                    
+                    <p>{{specific2[0]}}: {{specific2[1]}}</p>
+                }
+            }
+        }
+    }   
+
+</div>
+
+<button (click)="LevelUp()">+ Level Up</button>

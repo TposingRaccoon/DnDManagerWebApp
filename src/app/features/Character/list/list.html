@@ -1,0 +1,9 @@
+
+@for (character of (character()); track character){
+    <div class="character" (click)="Select(character)">
+        <div class="name"> {{character.name}}</div>
+        <div class="level">{{character.totalLevel}}</div>
+        <div class="class"> {{character.class?.name}}</div>
+    </div>
+}
+<button (click)="create()">+ New Character</button>

@@ -1,0 +1,16 @@
+<header>
+    @for (item of liens; track $index) 
+    {
+        <a [hidden]="!item.isVisible" [routerLink]="item.url">{{item.name}}</a>
+    }
+    @if (!isLoggedIn) {
+    <a routerLink="/login">Log In</a>
+    }
+    @if (isLoggedIn) {        
+    <button (click)="logout()">Log out</button>
+    }
+    @if (isLoggedIn) {
+    <button (click)="logout()">Log out</button>
+    }
+    
+</header>

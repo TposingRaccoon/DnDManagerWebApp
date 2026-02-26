@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+/* =========================
+   Global App Background
+========================= */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url("assets/images/background.jpg");
+  background-size: cover;          /* fills screen */
+  background-position: center;     /* centers image */
+  background-repeat: no-repeat;    /* prevents tiling */
+  background-attachment: fixed;    /* slight parallax effect */
+  
+  background-color: #1e1a14;       /* fallback color */
+}

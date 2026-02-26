@@ -1,0 +1,181 @@
+/* =========================
+   Character Display Container
+========================= */
+
+.character {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #f4e6c8; /* Parchment background */
+  border: 3px solid #5c4328;
+  border-radius: 8px;
+  box-shadow:
+    0 0 0 6px #3e2c1c,
+    0 20px 40px rgba(0, 0, 0, 0.5);
+  font-family: "Garamond", "Times New Roman", serif;
+  color: #3e2c1c;
+}
+
+/* =========================
+   Headings Styling
+========================= */
+
+.character h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #5c4328;
+  padding-bottom: 6px;
+}
+
+.character h2 {
+  font-size: 24px;
+  margin: 12px 0 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.character h3 {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+.character h4 {
+  font-size: 16px;
+  margin: 4px 0;
+  font-style: italic;
+}
+
+/* =========================
+   Stat Table (Horizontal)
+========================= */
+
+.stattable {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.stattable h3 {
+  background: #fff8e7;
+  border: 2px solid #5c4328;
+  border-radius: 6px;
+  padding: 10px 14px;
+  text-align: center;
+  flex: 1 1 100px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* =========================
+   Paragraphs & Class Specific
+========================= */
+
+.character p {
+  background: rgba(255, 248, 231, 0.6);
+  border: 2px solid #5c4328;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 6px 0;
+}
+
+/* =========================
+   Spell List
+========================= */
+
+.character h4 {
+  background: #fff8e7;
+  border: 2px solid #5c4328;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 4px 0;
+}
+
+/* =========================
+   Optional Highlights
+========================= */
+
+.character h2,
+.character h3 {
+  color: #3e2c1c;
+}
+
+.character h1 {
+  color: #5c4328;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+/* =========================
+   Back Button (Fixed Top Left)
+========================= */
+
+.back {
+  position: fixed;
+  top: 130px;
+  left: 340px;
+  z-index: 1000;
+
+  background: #f4e6c8;              /* Parchment */
+  border: 3px solid #5c4328;
+  border-radius: 6px;
+  box-shadow:
+    0 0 0 4px #3e2c1c,
+    0 10px 20px rgba(0, 0, 0, 0.4);
+
+  font-family: "Garamond", "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3e2c1c;
+
+  padding: 8px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.back:hover {
+  background: #fff8e7;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 4px #3e2c1c,
+    0 14px 24px rgba(0, 0, 0, 0.5);
+}
+
+.back:active {
+  transform: translateY(0px);
+  box-shadow:
+    0 0 0 3px #3e2c1c,
+    0 6px 12px rgba(0, 0, 0, 0.4);
+}
+button {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f4e6c8;
+  border: 3px solid #5c4328;
+  border-radius: 8px;
+  box-shadow:
+    0 0 0 4px #3e2c1c,
+    0 10px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 24px;
+  font-weight: bold;
+  color: #3e2c1c;
+  text-align: left;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 0 4px #3e2c1c,
+    0 15px 30px rgba(0, 0, 0, 0.4);
+  background: #f4e6c8; /* keep same as character */
+}

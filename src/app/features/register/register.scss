@@ -1,0 +1,85 @@
+/* =========================
+   Login Form Container
+========================= */
+
+.login-form {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #f4e6c8;
+  border-radius: 8px;
+  border: 3px solid #5c4328;
+  box-shadow:
+    0 0 0 6px #3e2c1c,
+    0 20px 40px rgba(0, 0, 0, 0.5);
+  font-family: "Garamond", "Times New Roman", serif;
+  color: #3e2c1c;
+}
+
+/* Form groups */
+.login-form .form-group {
+  margin-bottom: 30px;
+}
+
+/* Labels */
+.login-form label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Inputs */
+.login-form input.form-control {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #5c4328;
+  background: #fff8e7;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #3e2c1c;
+  transition: 0.2s ease;
+}
+
+.login-form input.form-control:focus {
+  outline: none;
+  border-color: #8b5e34;
+  box-shadow: 0 0 6px rgba(139, 94, 52, 0.5);
+}
+
+/* Error messages */
+.login-form .error {
+  margin-top: 6px;
+  color: #8b0000;
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* Submit button (Royal Style) */
+.login-form button[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #5c4328;
+  color: #f4e6c8;
+  border: 2px solid #3e2c1c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.login-form button[type="submit"]:hover:not(:disabled) {
+  background: #3e2c1c;
+}
+
+.login-form button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

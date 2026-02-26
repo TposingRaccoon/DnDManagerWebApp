@@ -1,0 +1,184 @@
+/* =========================
+   Page Background
+========================= */
+
+body {
+  background: #5e4630;
+  background-image: radial-gradient(#3e2c1c 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* =========================
+   Form Container (Parchment)
+========================= */
+
+.creation-form {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #f4e6c8;
+  border-radius: 8px;
+  border: 3px solid #5c4328;
+  box-shadow:
+    0 0 0 6px #3e2c1c,
+    0 20px 40px rgba(0, 0, 0, 0.5);
+  font-family: "Garamond", "Times New Roman", serif;
+  color: #3e2c1c;
+}
+
+/* Section spacing */
+.creation-form > div,
+.creation-form fieldset {
+  margin-bottom: 30px;
+}
+
+/* Labels */
+.creation-form label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Inputs */
+.creation-form input,
+.creation-form select {
+  padding: 8px 10px;
+  border: 2px solid #5c4328;
+  background: #fff8e7;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #3e2c1c;
+}
+
+.creation-form input:focus,
+.creation-form select:focus {
+  outline: none;
+  border-color: #8b5e34;
+  box-shadow: 0 0 6px rgba(139, 94, 52, 0.5);
+}
+
+/* =========================
+   Horizontal Ability Scores
+========================= */
+
+fieldset {
+  border: 2px solid #5c4328;
+  padding: 25px;
+  background: rgba(255, 248, 231, 0.6);
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Make stats horizontal */
+fieldset > div {
+  display: flex;
+  justify-content: flex-start; /* Left align items */
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap; /* Optional: prevents overflow on smaller screens */
+}
+
+/* Each stat box */
+fieldset > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* Stat label */
+fieldset > div > div label {
+  margin-bottom: 6px;
+}
+
+/* Stat input styled like sheet box */
+fieldset > div > div input {
+  width: 70px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  background: #fffdf4;
+  border: 2px solid #5c4328;
+  border-radius: 6px;
+}
+
+/* =========================
+   Option Buttons (Medieval)
+========================= */
+
+.option-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.option-item {
+  padding: 8px 16px;
+  border: 2px solid #5c4328;
+  background: #fff8e7;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s ease;
+  user-select: none;
+}
+
+.option-item:hover {
+  background: #e8d7b5;
+}
+
+.option-item input {
+  display: none;
+}
+
+/* Selected state */
+.option-item:has(input:checked) {
+  background: #8b5e34;
+  color: #fff8e7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================
+   Submit Button (Royal Style)
+========================= */
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #5c4328;
+  color: #f4e6c8;
+  border: 2px solid #3e2c1c;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background: #3e2c1c;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Error text */
+small {
+  color: #8b0000;
+  font-style: italic;
+}

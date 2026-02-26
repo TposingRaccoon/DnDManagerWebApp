@@ -1,0 +1,104 @@
+<form [formGroup]="fg" (ngSubmit)="onSubmit()" class="creation-form">
+
+  <fieldset>
+    <legend>Character Name</legend>
+    <div>
+      <label>Name</label>
+      <input type="text" formControlName="name" />
+      @if (fg.get('name')?.invalid && fg.get('name')?.touched) {
+        <small>
+          Name is required
+        </small>
+      }
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Race</legend>
+    <div class="option-group">
+      @for (race of (races()); track race.index) {
+        <label class="option-item">
+          <input type="radio" formControlName="race" [value]="race.index" />
+          {{ race.name }}
+        </label>
+      }
+    </div>
+  </fieldset>
+  @if (subRaces.length) {
+    <fieldset>
+      <legend>Subrace</legend>
+      <div class="option-group">
+        @for (sr of subRaces; track sr) {
+          <label class="option-item">
+            <input type="radio" formControlName="subRace" [value]="sr" />
+            {{ sr }}
+          </label>
+        }
+      </div>
+    </fieldset>
+  }
+  <fieldset>
+    <legend>Ability Scores</legend>
+    <div>
+      @for (stat of ['str','dex','con','int','wis','cha']; track stat) {
+        <div>
+          <label>{{ stat.toUpperCase() }}</label>
+          <input type="number" [formControlName]="stat" min="1" max="20" />
+        </div>
+      }
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Class</legend>
+    <div class="option-group">
+      @for (c of (levelClasses()); track c) {
+        <label class="option-item">
+          <input type="radio" formControlName="class" [value]="c" />
+          {{ c }}
+        </label>
+      }
+    </div>
+  </fieldset>
+  @if (subClasses.length) {
+    <fieldset>
+      <legend>Subclass</legend>
+      <div class="option-group">
+        @for (sc of subClasses; track sc.id) {
+          <label class="option-item">
+            <input type="radio" formControlName="subclass" [value]="sc.id" />
+            {{ sc.subclass?.name }}
+          </label>
+        }
+      </div>
+    </fieldset>
+  }
+  @if (cantrip.length) {
+    <fieldset>
+      <legend>Cantrip</legend>
+      <div class="option-group">
+        @for (c of cantrip; track c) {
+          <label class="option-item">
+            <input type="checkbox" [value]="c"(change)="onCantripChange($event)"/>
+            {{ c }}
+          </label>
+        }
+      </div>
+    </fieldset>
+  }
+  @if (spell.length) {
+    <fieldset>
+      <legend>Level 1 Spell</legend>
+      <div class="option-group">
+        @for (s of spell; track s) {
+          <label class="option-item">
+            <input type="checkbox" [value]="s" (change)="onSpellChange($event)"/>
+            {{ s }}
+          </label>
+        }
+      </div>
+    </fieldset>
+  }
+  <button type="submit" [disabled]="fg.invalid">
+    Create Character
+  </button>
+
+</form>
